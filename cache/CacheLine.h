@@ -1,0 +1,10 @@
+﻿#ifndef CACHELINE_H
+#define CACHELINE_H
+
+struct CacheLine {
+    bool valid = false;
+    bool dirty = false;
+    unsigned long tag = 0;
+};
+
+#endif
