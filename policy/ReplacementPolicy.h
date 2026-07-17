@@ -1,0 +1,12 @@
+#ifndef RP_H
+#define RP_H
+#include <vector>
+
+class ReplacementPolicy {
+public:
+    virtual int victim() = 0;
+    virtual void touch(int way) = 0;
+    virtual ~ReplacementPolicy(){}
+};
+
+#endif
