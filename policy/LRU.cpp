@@ -1,0 +1,14 @@
+#include "LRU.h"
+
+LRU::LRU(int assoc){
+    for(int i=0;i<assoc;i++) order.push_back(i);
+}
+
+int LRU::victim(){
+    return order.back();
+}
+
+void LRU::touch(int way){
+    order.remove(way);
+    order.push_front(way);
+}

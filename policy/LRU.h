@@ -1,0 +1,15 @@
+#ifndef LRU_H
+#define LRU_H
+
+#include "ReplacementPolicy.h"
+#include <list>
+
+class LRU : public ReplacementPolicy {
+    std::list<int> order;
+public:
+    LRU(int assoc);
+    int victim() override;
+    void touch(int way) override;
+};
+
+#endif
